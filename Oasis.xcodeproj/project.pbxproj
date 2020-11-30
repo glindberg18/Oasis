@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1677372B25749AED00D70F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372A25749AED00D70F6D /* AppDelegate.swift */; };
 		1677372D25749AED00D70F6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372C25749AED00D70F6D /* SceneDelegate.swift */; };
-		1677372F25749AED00D70F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372E25749AED00D70F6D /* ViewController.swift */; };
 		1677373225749AED00D70F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1677373025749AED00D70F6D /* Main.storyboard */; };
 		1677373525749AED00D70F6D /* Oasis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1677373325749AED00D70F6D /* Oasis.xcdatamodeld */; };
 		1677373725749AF000D70F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1677373625749AF000D70F6D /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		1677372725749AED00D70F6D /* Oasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1677372A25749AED00D70F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1677372C25749AED00D70F6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1677372E25749AED00D70F6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1677373125749AED00D70F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1677373425749AED00D70F6D /* Oasis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oasis.xcdatamodel; sourceTree = "<group>"; };
 		1677373625749AF000D70F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				1677372A25749AED00D70F6D /* AppDelegate.swift */,
 				1677372C25749AED00D70F6D /* SceneDelegate.swift */,
-				1677372E25749AED00D70F6D /* ViewController.swift */,
 				1677373025749AED00D70F6D /* Main.storyboard */,
 				1677373625749AF000D70F6D /* Assets.xcassets */,
 				1677373825749AF000D70F6D /* LaunchScreen.storyboard */,
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1677372F25749AED00D70F6D /* ViewController.swift in Sources */,
 				1677373525749AED00D70F6D /* Oasis.xcdatamodeld in Sources */,
 				1677372B25749AED00D70F6D /* AppDelegate.swift in Sources */,
 				1677372D25749AED00D70F6D /* SceneDelegate.swift in Sources */,
