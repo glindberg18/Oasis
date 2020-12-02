@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		165386662577881E00964188 /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165386642577881E00964188 /* Plant+CoreDataClass.swift */; };
-		165386672577881E00964188 /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165386652577881E00964188 /* Plant+CoreDataProperties.swift */; };
 		1677372B25749AED00D70F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372A25749AED00D70F6D /* AppDelegate.swift */; };
 		1677372D25749AED00D70F6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372C25749AED00D70F6D /* SceneDelegate.swift */; };
 		1677373225749AED00D70F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1677373025749AED00D70F6D /* Main.storyboard */; };
@@ -32,7 +30,6 @@
 		1677373B25749AF000D70F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CBF021725776C6A00EC93D8 /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
 		8CBF021C25776FDD00EC93D8 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
-		8CBF022025779D3B00EC93D8 /* Oasis.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Oasis.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +62,9 @@
 		1677372925749AED00D70F6D /* Oasis */ = {
 			isa = PBXGroup;
 			children = (
-				8CBF022025779D3B00EC93D8 /* Oasis.entitlements */,
 				1677372A25749AED00D70F6D /* AppDelegate.swift */,
 				1677372C25749AED00D70F6D /* SceneDelegate.swift */,
 				1677373025749AED00D70F6D /* Main.storyboard */,
-				1677375F25772A1F00D70F6D /* PlantViewController.swift */,
 				1677373625749AF000D70F6D /* Assets.xcassets */,
 				1677373825749AF000D70F6D /* LaunchScreen.storyboard */,
 				1677373B25749AF000D70F6D /* Info.plist */,
