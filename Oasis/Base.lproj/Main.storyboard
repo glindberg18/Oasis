@@ -72,19 +72,167 @@
                                 </constraints>
                                 <state key="normal" image="x-mark"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kg-Kq-e9Z">
-                                <rect key="frame" x="107" y="125" width="221" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kg-Kq-e9Z">
+                                <rect key="frame" x="97" y="60" width="220.5" height="25"/>
                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="atO-Jo-Twc" userLabel="Outermost Stack">
+                                <rect key="frame" x="15" y="68" width="384" height="680"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="254" horizontalCompressionResistancePriority="748" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gnG-rW-Afq" userLabel="Disable Notifications">
+                                        <rect key="frame" x="81.5" y="0.0" width="221" height="213.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="254" text="Disable Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOV-OV-lH7">
+                                                <rect key="frame" x="0.0" y="96.5" width="157" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrX-AX-6sy">
+                                                <rect key="frame" x="172" y="91" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="760" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWO-To-xDu" userLabel="Interval Reminder">
+                                        <rect key="frame" x="24.5" y="233.5" width="335" height="213"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval Reminder:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aP-mn-79u">
+                                                <rect key="frame" x="0.0" y="96.5" width="137.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tzG-aD-Ixw">
+                                                <rect key="frame" x="147.5" y="72.5" width="128.5" height="68"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wUd-wz-s20">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-Yz-GOf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hour(s)      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-sF-OZM">
+                                                                <rect key="frame" x="47" y="0.0" width="81.5" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aph-Qm-c6h">
+                                                        <rect key="frame" x="0.0" y="34" width="128.5" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esv-fR-q6q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minute(s)  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSq-t4-awh">
+                                                                <rect key="frame" x="47" y="0.0" width="81.5" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evj-U2-kdA">
+                                                <rect key="frame" x="286" y="91" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="245" verticalCompressionResistancePriority="744" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lZ7-MH-og4" userLabel="Alarm Group">
+                                        <rect key="frame" x="0.0" y="466.5" width="384" height="213.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-XL-Mnw" userLabel="Alarm 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="42.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-kb-Fjf">
+                                                        <rect key="frame" x="0.0" y="11" width="61" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="85o-zN-uNI">
+                                                        <rect key="frame" x="76" y="5.5" width="51" height="31"/>
+                                                    </switch>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-wj-fQ6">
+                                                        <rect key="frame" x="140" y="0.0" width="244" height="42.5"/>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-OF-jTA" userLabel="Alarm 2">
+                                                <rect key="frame" x="0.0" y="57.5" width="384" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-WZ-TNt">
+                                                        <rect key="frame" x="0.0" y="10.5" width="63.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-2d-hdr">
+                                                        <rect key="frame" x="78.5" y="5.5" width="51" height="31"/>
+                                                    </switch>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-yK-auj">
+                                                        <rect key="frame" x="142.5" y="0.0" width="241.5" height="42"/>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3EE-X7-bwe" userLabel="Alarm 3">
+                                                <rect key="frame" x="0.0" y="114.5" width="384" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIK-qk-dX7">
+                                                        <rect key="frame" x="0.0" y="10.5" width="64" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-0h-tKM">
+                                                        <rect key="frame" x="79" y="5.5" width="51" height="31"/>
+                                                    </switch>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-k1-IZs">
+                                                        <rect key="frame" x="143" y="0.0" width="241" height="42"/>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mnq-2W-hKX" userLabel="Alarm 4">
+                                                <rect key="frame" x="0.0" y="171.5" width="384" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uy-Za-bxy">
+                                                        <rect key="frame" x="0.0" y="10.5" width="64" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hth-JX-TII">
+                                                        <rect key="frame" x="79" y="5.5" width="51" height="31"/>
+                                                    </switch>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-H7-KVZ">
+                                                        <rect key="frame" x="143" y="0.0" width="241" height="42"/>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="37J-yV-0n8"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="atO-Jo-Twc" firstAttribute="leading" secondItem="37J-yV-0n8" secondAttribute="leading" constant="15" id="8iM-hK-Tim"/>
                             <constraint firstItem="eth-qz-wkk" firstAttribute="leading" secondItem="37J-yV-0n8" secondAttribute="leading" constant="20" id="B1M-hR-qn3"/>
+                            <constraint firstItem="37J-yV-0n8" firstAttribute="bottom" secondItem="atO-Jo-Twc" secondAttribute="bottom" constant="60" id="GKs-qW-SNh"/>
+                            <constraint firstItem="37J-yV-0n8" firstAttribute="trailing" secondItem="atO-Jo-Twc" secondAttribute="trailing" constant="15" id="GPc-lW-ePo"/>
+                            <constraint firstItem="7Kg-Kq-e9Z" firstAttribute="centerX" secondItem="YkN-Z7-dUq" secondAttribute="centerX" id="Yoa-Xr-yfk"/>
+                            <constraint firstItem="7Kg-Kq-e9Z" firstAttribute="top" secondItem="37J-yV-0n8" secondAttribute="top" constant="60" id="a4y-Hp-Uxd"/>
                             <constraint firstItem="eth-qz-wkk" firstAttribute="top" secondItem="37J-yV-0n8" secondAttribute="top" constant="20" id="gbP-nE-gh0"/>
+                            <constraint firstItem="atO-Jo-Twc" firstAttribute="top" secondItem="eth-qz-wkk" secondAttribute="bottom" constant="20" id="iMq-j0-0Yy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nqC-nh-DYY"/>
@@ -120,7 +268,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Z1-VxN">
                                         <rect key="frame" x="0.0" y="65" width="324" height="653"/>
-                                        <mutableString key="text">Your body is 70% water. Naturally, you need to consume a lot of water daily to stay healthy. But how much is the right amount? As a general rule of thumb, you should consume about 8 cups of water a day. To help you stay hydrated, we recommend carrying a reusable water bottle with you during the day. Additionally, making a conscious effort to choose water over sugary drinks will help you stay healthy and hydrated. Whenever you finish a cup of water (8 oz), water your plant, too. Keep it up, and witness the growth of a virtual plant and a healthy habit!</mutableString>
+                                        <string key="text">Your body is 70% water. Naturally, you need to consume a lot of water daily to stay healthy. But how much is the right amount? As a general rule of thumb, you should consume about 8 cups of water a day. To help you stay hydrated, we recommend carrying a reusable water bottle with you during the day. Additionally, making a conscious effort to choose water over sugary drinks will help you stay healthy and hydrated. Whenever you finish a cup of water (8 oz), water your plant, too. Keep it up, and witness the growth of a virtual plant and a healthy habit!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -148,7 +296,6 @@
         <!--Settings-->
         <scene sceneID="ngY-Gs-1tG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="etZ-YG-5cD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Settings" id="eoH-ri-7Il" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eFM-4c-nTa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -225,6 +372,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gearshape" catalog="system" id="jcx-5h-e2F"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etZ-YG-5cD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2367" y="-99"/>
         </scene>
