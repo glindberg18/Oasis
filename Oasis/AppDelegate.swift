@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             notification.setReminder(title: "Good Afternoon!", body: "Don't forget to stay hydrated!", hour: 12, minute: 30)
             notification.setReminder(title: "Good Evening!", body: "The day is almost over. Keep up the good work!", hour: 18, minute: 00)
             notification.setReminder(title: "Good night!", body: "Don't forget to go to sleep with a glass of water by your bed in case you get thirsty in the night", hour: 21, minute: 0)
-        notification.setReminder(title: "TimedReminder", body: "Hey it's beend a while, why don't you break for a galss of water", timeInterval: 120)
+        notification.setReminder(title: "Timed Reminder", body: "Hey it's been a while, why don't you break for a glass of water", timeInterval: 120)
             return true
     }
 
