@@ -59,7 +59,7 @@
         <!--Notification Settings-->
         <scene sceneID="g3R-nS-rSo">
             <objects>
-                <viewController title="Notification Settings" id="5JS-XJ-J8I" sceneMemberID="viewController">
+                <viewController title="Notification Settings" id="5JS-XJ-J8I" customClass="NotificationSettingsViewController" customModule="Oasis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YkN-Z7-dUq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,21 +82,24 @@
                                 <rect key="frame" x="15" y="68" width="384" height="680"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" verticalHuggingPriority="254" horizontalCompressionResistancePriority="748" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gnG-rW-Afq" userLabel="Disable Notifications">
-                                        <rect key="frame" x="81.5" y="0.0" width="221" height="213.5"/>
+                                        <rect key="frame" x="84" y="0.0" width="216" height="213.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="254" text="Disable Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOV-OV-lH7">
-                                                <rect key="frame" x="0.0" y="96.5" width="157" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="254" text="Enable Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOV-OV-lH7">
+                                                <rect key="frame" x="0.0" y="96.5" width="152" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrX-AX-6sy">
-                                                <rect key="frame" x="172" y="91" width="51" height="31"/>
+                                                <rect key="frame" x="167" y="91" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="disableAllToggled:" destination="5JS-XJ-J8I" eventType="valueChanged" id="rwR-Rf-g2D"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="760" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWO-To-xDu" userLabel="Interval Reminder">
-                                        <rect key="frame" x="24.5" y="233.5" width="335" height="213"/>
+                                        <rect key="frame" x="22" y="233.5" width="340" height="213"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval Reminder:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aP-mn-79u">
                                                 <rect key="frame" x="0.0" y="96.5" width="137.5" height="20.5"/>
@@ -105,18 +108,21 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tzG-aD-Ixw">
-                                                <rect key="frame" x="147.5" y="72.5" width="128.5" height="68"/>
+                                                <rect key="frame" x="147.5" y="72.5" width="133.5" height="68"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wUd-wz-s20">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="34"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-Yz-GOf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-Yz-GOf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="37" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="hourTextFieldChanged:" destination="5JS-XJ-J8I" eventType="editingDidEnd" id="wJi-jd-Wgb"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hour(s)      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-sF-OZM">
-                                                                <rect key="frame" x="47" y="0.0" width="81.5" height="34"/>
+                                                                <rect key="frame" x="52" y="0.0" width="81.5" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -124,15 +130,18 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aph-Qm-c6h">
-                                                        <rect key="frame" x="0.0" y="34" width="128.5" height="34"/>
+                                                        <rect key="frame" x="0.0" y="34" width="133.5" height="34"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esv-fR-q6q">
-                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esv-fR-q6q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="37" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="minuteTextFieldChanged:" destination="5JS-XJ-J8I" eventType="editingDidEnd" id="odm-4i-NSV"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minute(s)  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSq-t4-awh">
-                                                                <rect key="frame" x="47" y="0.0" width="81.5" height="34"/>
+                                                                <rect key="frame" x="52" y="0.0" width="81.5" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -142,7 +151,10 @@
                                                 </subviews>
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evj-U2-kdA">
-                                                <rect key="frame" x="286" y="91" width="51" height="31"/>
+                                                <rect key="frame" x="291" y="91" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="intervalToggled:" destination="5JS-XJ-J8I" eventType="valueChanged" id="URR-yt-WwO"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -152,68 +164,107 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-XL-Mnw" userLabel="Alarm 1">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="42.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-kb-Fjf">
-                                                        <rect key="frame" x="0.0" y="11" width="61" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning Alarm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-kb-Fjf">
+                                                        <rect key="frame" x="0.0" y="11" width="121" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="85o-zN-uNI">
-                                                        <rect key="frame" x="76" y="5.5" width="51" height="31"/>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="85o-zN-uNI">
+                                                        <rect key="frame" x="136" y="5.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="morningToggled:" destination="5JS-XJ-J8I" eventType="valueChanged" id="Sxs-IM-kpT"/>
+                                                        </connections>
                                                     </switch>
-                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-wj-fQ6">
-                                                        <rect key="frame" x="140" y="0.0" width="244" height="42.5"/>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-wj-fQ6">
+                                                        <rect key="frame" x="200" y="0.0" width="184" height="42.5"/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="628527600.435763">
+                                                            <!--2020-12-01 15:00:00 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="morningDatePickerChanged:" destination="5JS-XJ-J8I" eventType="valueChanged" id="iSY-69-GB6"/>
+                                                        </connections>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-OF-jTA" userLabel="Alarm 2">
                                                 <rect key="frame" x="0.0" y="57.5" width="384" height="42"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-WZ-TNt">
-                                                        <rect key="frame" x="0.0" y="10.5" width="63.5" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon Alarm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-WZ-TNt">
+                                                        <rect key="frame" x="0.0" y="10.5" width="134" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-2d-hdr">
-                                                        <rect key="frame" x="78.5" y="5.5" width="51" height="31"/>
+                                                    <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-2d-hdr">
+                                                        <rect key="frame" x="149" y="5.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="afternoonToggled:" destination="5JS-XJ-J8I" eventType="valueChanged" id="zNk-S3-TWL"/>
+                                                        </connections>
                                                     </switch>
-                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-yK-auj">
-                                                        <rect key="frame" x="142.5" y="0.0" width="241.5" height="42"/>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-yK-auj">
+                                                        <rect key="frame" x="213" y="0.0" width="171" height="42"/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="628547400.56837797">
+                                                            <!--2020-12-01 20:30:00 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="afternoonDatePickerChanged:" destination="5JS-XJ-J8I" eventType="valueChanged" id="Zso-M3-E3X"/>
+                                                        </connections>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3EE-X7-bwe" userLabel="Alarm 3">
                                                 <rect key="frame" x="0.0" y="114.5" width="384" height="42"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 3:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIK-qk-dX7">
-                                                        <rect key="frame" x="0.0" y="10.5" width="64" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening Alarm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIK-qk-dX7">
+                                                        <rect key="frame" x="0.0" y="10.5" width="118" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-0h-tKM">
-                                                        <rect key="frame" x="79" y="5.5" width="51" height="31"/>
+                                                    <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-0h-tKM">
+                                                        <rect key="frame" x="133" y="5.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="eveningToggled:" destination="5JS-XJ-J8I" eventType="valueChanged" id="q3f-LT-Eox"/>
+                                                        </connections>
                                                     </switch>
-                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-k1-IZs">
-                                                        <rect key="frame" x="143" y="0.0" width="241" height="42"/>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-k1-IZs">
+                                                        <rect key="frame" x="197" y="0.0" width="187" height="42"/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="628567200.78956795">
+                                                            <!--2020-12-02 02:00:00 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="eveningDatePickerChanged:" destination="5JS-XJ-J8I" eventType="valueChanged" id="heS-93-MAA"/>
+                                                        </connections>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mnq-2W-hKX" userLabel="Alarm 4">
                                                 <rect key="frame" x="0.0" y="171.5" width="384" height="42"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm 4:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uy-Za-bxy">
-                                                        <rect key="frame" x="0.0" y="10.5" width="64" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Alarm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uy-Za-bxy">
+                                                        <rect key="frame" x="0.0" y="10.5" width="99" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hth-JX-TII">
-                                                        <rect key="frame" x="79" y="5.5" width="51" height="31"/>
+                                                    <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="746" verticalHuggingPriority="745" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hth-JX-TII">
+                                                        <rect key="frame" x="114" y="5.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="nightToggled:" destination="5JS-XJ-J8I" eventType="valueChanged" id="ET6-ES-hpw"/>
+                                                        </connections>
                                                     </switch>
-                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-H7-KVZ">
-                                                        <rect key="frame" x="143" y="0.0" width="241" height="42"/>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="740" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-H7-KVZ">
+                                                        <rect key="frame" x="178" y="0.0" width="206" height="42"/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="628578000.81706905">
+                                                            <!--2020-12-02 05:00:00 +0000-->
+                                                        </date>
+                                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                                            <!--1970-01-01 11:00:00 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="nightDatePickerChanged:" destination="5JS-XJ-J8I" eventType="valueChanged" id="Rgr-lm-q2H"/>
+                                                        </connections>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
@@ -224,6 +275,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="37J-yV-0n8"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="atO-Jo-Twc" firstAttribute="leading" secondItem="37J-yV-0n8" secondAttribute="leading" constant="15" id="8iM-hK-Tim"/>
                             <constraint firstItem="eth-qz-wkk" firstAttribute="leading" secondItem="37J-yV-0n8" secondAttribute="leading" constant="20" id="B1M-hR-qn3"/>
@@ -234,10 +286,32 @@
                             <constraint firstItem="eth-qz-wkk" firstAttribute="top" secondItem="37J-yV-0n8" secondAttribute="top" constant="20" id="gbP-nE-gh0"/>
                             <constraint firstItem="atO-Jo-Twc" firstAttribute="top" secondItem="eth-qz-wkk" secondAttribute="bottom" constant="20" id="iMq-j0-0Yy"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aSh-a6-Z5t" appends="YES" id="Ju0-TL-eEZ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="nqC-nh-DYY"/>
+                    <connections>
+                        <outlet property="afternoonAlarm" destination="M6d-2d-hdr" id="h3J-09-0ju"/>
+                        <outlet property="afternoonDatePicker" destination="kNm-yK-auj" id="Gix-Fa-ujU"/>
+                        <outlet property="disableAllSwitch" destination="rrX-AX-6sy" id="vR4-2o-czK"/>
+                        <outlet property="eveningAlarm" destination="6gZ-0h-tKM" id="9wb-30-ROU"/>
+                        <outlet property="eveningDatePicker" destination="l6g-k1-IZs" id="fn4-mJ-QTM"/>
+                        <outlet property="hourTextField" destination="fyi-Yz-GOf" id="eb7-hT-g9O"/>
+                        <outlet property="intervalSwitch" destination="evj-U2-kdA" id="48N-Mt-bxt"/>
+                        <outlet property="minuteTextField" destination="esv-fR-q6q" id="PCU-KE-oPq"/>
+                        <outlet property="morningAlarm" destination="85o-zN-uNI" id="A0e-ae-5YA"/>
+                        <outlet property="morningDatePicker" destination="NcZ-wj-fQ6" id="YyD-OA-Nme"/>
+                        <outlet property="nightAlarm" destination="Hth-JX-TII" id="gDu-ZV-lxb"/>
+                        <outlet property="nightDatePicker" destination="P9l-H7-KVZ" id="fls-n8-QWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmP-mw-fZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aSh-a6-Z5t">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="5JS-XJ-J8I" id="iMh-FD-J6d"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-3397.1014492753625" y="-676.33928571428567"/>
         </scene>
