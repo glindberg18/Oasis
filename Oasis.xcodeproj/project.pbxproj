@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165386662577881E00964188 /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165386642577881E00964188 /* Plant+CoreDataClass.swift */; };
+		165386672577881E00964188 /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165386652577881E00964188 /* Plant+CoreDataProperties.swift */; };
 		1677372B25749AED00D70F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372A25749AED00D70F6D /* AppDelegate.swift */; };
 		1677372D25749AED00D70F6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677372C25749AED00D70F6D /* SceneDelegate.swift */; };
 		1677373225749AED00D70F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1677373025749AED00D70F6D /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		165386642577881E00964188 /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		165386652577881E00964188 /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1677372725749AED00D70F6D /* Oasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1677372A25749AED00D70F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1677372C25749AED00D70F6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,12 +69,15 @@
 				1677372A25749AED00D70F6D /* AppDelegate.swift */,
 				1677372C25749AED00D70F6D /* SceneDelegate.swift */,
 				1677373025749AED00D70F6D /* Main.storyboard */,
+				1677375F25772A1F00D70F6D /* PlantViewController.swift */,
 				1677373625749AF000D70F6D /* Assets.xcassets */,
 				1677373825749AF000D70F6D /* LaunchScreen.storyboard */,
 				1677373B25749AF000D70F6D /* Info.plist */,
 				1677373325749AED00D70F6D /* Oasis.xcdatamodeld */,
 				8CBF021725776C6A00EC93D8 /* NotificationSettingsViewController.swift */,
 				8CBF021C25776FDD00EC93D8 /* NotificationHandler.swift */,
+				165386642577881E00964188 /* Plant+CoreDataClass.swift */,
+				165386652577881E00964188 /* Plant+CoreDataProperties.swift */,
 			);
 			path = Oasis;
 			sourceTree = "<group>";
