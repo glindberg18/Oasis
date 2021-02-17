@@ -25,7 +25,7 @@ class PlantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     let defaults = UserDefaults.standard
     var hasPlant = false
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let options = ["Cup (8 oz)", "Small water bottle (16 oz)", "Medium water bottle (22 oz)", "Large water bottle (32 oz)"]
+    let options = ["Cup (8 oz)", "Small water bottle (16 oz)", "Medium water bottle (24 oz)", "Large water bottle (32 oz)"]
 
     
     // MARK: - IBOutlets
